@@ -1,14 +1,12 @@
-package com.example.fooddelivery
+package com.example.fooddelivery.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.example.fooddelivery.databinding.ActivityMainBinding
+import com.example.fooddelivery.R
 import com.example.fooddelivery.databinding.FragmentHomeBinding
 
 
@@ -38,7 +36,7 @@ class HomeFragment : Fragment() {
                     val deger = 1
                     if (deger == 1) {
                         childFragmentManager.primaryNavigationFragment?.findNavController()
-                            ?.navigate(R.id.loginFragment)
+                            ?.navigate(R.id.registerFragment)
                     } else {
                         childFragmentManager.primaryNavigationFragment?.findNavController()
                             ?.navigate(R.id.profileFragment)

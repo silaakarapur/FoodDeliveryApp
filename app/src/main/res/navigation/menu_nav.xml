@@ -7,17 +7,21 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.fooddelivery.LoginFragment"
+        android:name="com.example.fooddelivery.view.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.fooddelivery.MainFragment"
+        android:name="com.example.fooddelivery.view.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.fooddelivery.ProfileFragment"
+        android:name="com.example.fooddelivery.view.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.fooddelivery.view.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>
