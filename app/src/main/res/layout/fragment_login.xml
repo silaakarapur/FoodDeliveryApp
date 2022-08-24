@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722"
+    android:background="@color/color_1"
     tools:context=".view.LoginFragment">
 
 
@@ -15,6 +15,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginBottom="32dp"
         android:text="Giriş Yap"
+        android:paddingLeft="50dp"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         android:textStyle="bold"

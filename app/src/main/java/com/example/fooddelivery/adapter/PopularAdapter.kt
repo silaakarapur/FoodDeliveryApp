@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.R
 import com.example.fooddelivery.model.PopularModel
+import com.example.fooddelivery.view.MainFragmentDirections
 
 class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
     RecyclerView.Adapter<PopularAdapter.myViewHolder>() {
@@ -45,8 +46,8 @@ class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
 
         holder.add.setOnClickListener {
             val data = itemlist[position]
-           // val action = HomeFragmentDirections.actionHomeFragmentToShowDetailFragment(data)
-            //Navigation.findNavController(it).navigate(action)
+            val action = MainFragmentDirections.actionMainFragmentToShowDetailFragment(data)
+            Navigation.findNavController(it).navigate(action)
         }
 
         holder.bindItem(itemlist[position])

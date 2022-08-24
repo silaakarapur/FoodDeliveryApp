@@ -14,7 +14,11 @@
         android:id="@+id/mainFragment"
         android:name="com.example.fooddelivery.view.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_showDetailFragment"
+            app:destination="@id/showDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.fooddelivery.view.ProfileFragment"
@@ -24,4 +28,21 @@
         android:id="@+id/registerFragment"
         android:name="com.example.fooddelivery.view.RegisterFragment"
         android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/showDetailFragment"
+        android:name="com.example.fooddelivery.view.ShowDetailFragment"
+        android:label="fragment_show_detail"
+        tools:layout="@layout/fragment_show_detail" >
+        <argument
+            android:name="data"
+            app:argType="com.example.fooddelivery.model.PopularModel" />
+        <action
+            android:id="@+id/action_showDetailFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.fooddelivery.view.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
 </navigation>

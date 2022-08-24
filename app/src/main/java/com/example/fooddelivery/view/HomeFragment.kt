@@ -19,35 +19,36 @@ class HomeFragment : Fragment() {
     ): View? {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val view = binding.root
-        binding.bottomnavigation.setOnItemReselectedListener { item ->
-            when (item.itemId) {
+        binding.bottomnavigation.setOnItemSelectedListener {
+            when (it.itemId) {
                 R.id.home -> {
-
                     childFragmentManager.primaryNavigationFragment?.findNavController()
                         ?.navigate(R.id.mainFragment)
-
                 }
                 R.id.message -> {
-
-
                 }
                 R.id.profile -> {
+
+                    //Burada kullanıcını daha önceden uygulamaya giriş yapıp yapmadığı kontrol edilecek
                     val deger = 1
                     if (deger == 1) {
                         childFragmentManager.primaryNavigationFragment?.findNavController()
                             ?.navigate(R.id.registerFragment)
-                    } else {
+                    } else if (deger==2) {
                         childFragmentManager.primaryNavigationFragment?.findNavController()
                             ?.navigate(R.id.profileFragment)
+                    }
+                    else{
+                        childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.loginFragment)
                     }
 
 
                 }
 
             }
+            true
         }
-        return view
+        return binding.root
 
     }
 

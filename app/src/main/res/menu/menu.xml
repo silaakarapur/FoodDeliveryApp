@@ -10,6 +10,6 @@
         android:title="Message" />
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/prfile"
+        android:icon="@drawable/profile"
         android:title="Setting" />
 </menu>
