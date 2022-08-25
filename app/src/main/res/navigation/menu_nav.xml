@@ -9,7 +9,14 @@
         android:id="@+id/loginFragment"
         android:name="com.example.fooddelivery.view.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fooddelivery.view.MainFragment"
@@ -27,7 +34,11 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.fooddelivery.view.RegisterFragment"
-        android:label="RegisterFragment" />
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/showDetailFragment"
         android:name="com.example.fooddelivery.view.ShowDetailFragment"
