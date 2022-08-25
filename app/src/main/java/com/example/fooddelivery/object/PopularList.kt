@@ -10,19 +10,19 @@ object PopularList {
             "Pizza",
             R.drawable.button,
             4.11,
-            "+ Add",
+            "Description",
         )
         val itemModel2 = PopularModel(
             "Hamburger",
             R.drawable.button,
             4.11,
-            "+ Add",
+            "Description",
         )
         val itemModel3 = PopularModel(
             "Pizza",
             R.drawable.button,
             4.11,
-            "+ Add",
+            "Description",
 
             )
 
@@ -30,7 +30,7 @@ object PopularList {
             "Pizza",
             R.drawable.button,
             4.11,
-            "+ Add",
+            "Description",
 
             )
 

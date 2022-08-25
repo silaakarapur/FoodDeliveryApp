@@ -27,7 +27,6 @@ class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
             name.text = populerFoodModel.name
             image.setImageResource(populerFoodModel.image)
             price.text = populerFoodModel.price.toString()
-            add.text = populerFoodModel.description
 
 
         }

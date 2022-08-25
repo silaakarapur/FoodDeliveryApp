@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.Navigation
 import com.example.fooddelivery.databinding.FragmentHomeBinding
 import com.example.fooddelivery.databinding.FragmentLoginBinding
@@ -57,8 +58,6 @@ class LoginFragment : Fragment() {
 
             val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             Navigation.findNavController(it).navigate(action)
-
-
         }
     }
 

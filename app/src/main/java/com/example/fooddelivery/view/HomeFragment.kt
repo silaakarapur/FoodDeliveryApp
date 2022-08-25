@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.fooddelivery.R
 import com.example.fooddelivery.databinding.FragmentHomeBinding
@@ -18,9 +17,11 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         mAuth = FirebaseAuth.getInstance()
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+
         binding.bottomnavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
@@ -31,14 +32,10 @@ class HomeFragment : Fragment() {
                 }
                 R.id.profile -> {
                     if (mAuth?.currentUser != null) {
-
                         childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.profileFragment)
-                        println("User boş değil")
                     }
                     else{
-
                         childFragmentManager.primaryNavigationFragment?.findNavController()?.navigate(R.id.loginFragment)
-
                     }
                 }
             }

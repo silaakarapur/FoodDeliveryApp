@@ -154,7 +154,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recy"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"/>
 
                 <TextView
                     android:id="@+id/textView10"
