@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
             recy.layoutManager = lmHorizontal
             recy2.adapter = popularAdapter
             recy2.layoutManager = lmHorizontal2
-            favori.setOnClickListener {
+            sepet.setOnClickListener {
                 val action = MainFragmentDirections.actionMainFragmentToCardFragment()
                 Navigation.findNavController(it).navigate(action)
             }

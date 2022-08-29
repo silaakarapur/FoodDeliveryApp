@@ -20,6 +20,7 @@ class ProductAdapter(private val itemList: List<Card>) :
         val image = view.findViewById<ImageView>(R.id.card_image)
         val price = view.findViewById<TextView>(R.id.card_price)
         var count = view.findViewById<TextView>(R.id.card_count)
+        var totalCount =view.findViewById<TextView>(R.id.total_count)
         val minusButton = view.findViewById<TextView>(R.id.minus_button_card)
         val textview = view.findViewById<TextView>(R.id.card_count)
         val plusButton = view.findViewById<TextView>(R.id.plus_button_card)
@@ -52,6 +53,7 @@ class ProductAdapter(private val itemList: List<Card>) :
         holder.name.text = itemList[position].eatName
         holder.count.text = itemList[position].eatCount.toString()
         holder.price.text = itemList[position].price.toString()
+        holder.totalCount.text= (holder.count.text.toString().toInt()*holder.price.text.toString().toDouble()).toString()
         println("Get value: ${itemList[position].eatimage}")
         //holder.image.setImageResource(itemList[position].eatimage.toInt())
     }
