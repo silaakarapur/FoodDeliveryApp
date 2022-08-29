@@ -22,7 +22,7 @@ lateinit var binding: FragmentSplashBinding
             view?.let { it1 -> Navigation.findNavController(it1).navigate(action) }
 
 
-        }, 1000)
+        }, 1500)
         return binding.root
     }
 
