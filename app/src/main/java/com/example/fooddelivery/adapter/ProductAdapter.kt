@@ -16,7 +16,7 @@ class ProductAdapter(private val itemList: List<Card>) :
     class ProductViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
 
-        val name = view.findViewById<TextView>(R.id.card_textview)
+        var name = view.findViewById<TextView>(R.id.card_textview)
         val image = view.findViewById<ImageView>(R.id.card_image)
         val price = view.findViewById<TextView>(R.id.card_price)
         var count = view.findViewById<TextView>(R.id.card_count)

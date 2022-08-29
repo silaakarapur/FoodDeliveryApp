@@ -3,7 +3,6 @@ package com.example.fooddelivery.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
@@ -12,46 +11,45 @@ import com.example.fooddelivery.R
 import com.example.fooddelivery.model.PopularModel
 import com.example.fooddelivery.view.MainFragmentDirections
 
-class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
-    RecyclerView.Adapter<PopularAdapter.myViewHolder>() {
-    class myViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
+class PopularAdapter(val itemList: ArrayList<PopularModel>):
+    RecyclerView.Adapter<PopularAdapter.MyViewHolder>() {
+    class MyViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
 
-        val name = view.findViewById<TextView>(R.id.eat_name)
-        val image = view.findViewById(R.id.image) as ImageView
+        val name  = view.findViewById<TextView>(R.id.eat_name)
+        val image = view.findViewById<ImageView>(R.id.image)
         val price = view.findViewById<TextView>(R.id.eat_price)
-        var add = view.findViewById<TextView>(R.id.add_Btn)
-        fun bindItem(populerFoodModel: PopularModel) {
+        var add   = view.findViewById<TextView>(R.id.add_Btn)
 
-
-            name.text = populerFoodModel.name
-            image.setImageResource(populerFoodModel.image)
-            price.text = populerFoodModel.price.toString()
+        fun bindItem(popularFoodModel: PopularModel) {
+            name.text = popularFoodModel.name
+            image.setImageResource(popularFoodModel.image)
+            price.text = popularFoodModel.price.toString()
 
 
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.populer_card_view, parent, false)
-        return myViewHolder(view)
+        return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: myViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
 
         holder.add.setOnClickListener {
-            val data = itemlist[position]
+            val data = itemList[position]
             val action = MainFragmentDirections.actionMainFragmentToShowDetailFragment(data)
             Navigation.findNavController(it).navigate(action)
         }
 
-        holder.bindItem(itemlist[position])
+        holder.bindItem(itemList[position])
     }
 
     override fun getItemCount(): Int {
-        return itemlist.size
+        return itemList.size
     }
 
 }

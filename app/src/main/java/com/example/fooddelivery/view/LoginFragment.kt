@@ -37,7 +37,6 @@ class LoginFragment : Fragment() {
 
     ): View {
         mAuth = FirebaseAuth.getInstance()
-
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         registerAction()

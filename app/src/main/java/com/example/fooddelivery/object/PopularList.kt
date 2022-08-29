@@ -19,20 +19,30 @@ object PopularList {
             "Description",
         )
         val itemModel3 = PopularModel(
-            "Pizza",
+            "Cola",
             R.drawable.button,
             4.11,
             "Description",
-
-            )
+        )
 
         val itemModel4 = PopularModel(
             "Pizza",
             R.drawable.button,
             4.11,
             "Description",
-
-            )
+        )
+        val itemModel5 = PopularModel(
+            "Pizza",
+            R.drawable.button,
+            4.11,
+            "Description",
+        )
+        val itemModel6 = PopularModel(
+            "Pizza",
+            R.drawable.button,
+            4.11,
+            "Description",
+        )
 
 
         val itemList: ArrayList<PopularModel> = ArrayList()
@@ -40,6 +50,8 @@ object PopularList {
         itemList.add(itemModel2)
         itemList.add(itemModel3)
         itemList.add(itemModel4)
+        itemList.add(itemModel5)
+        itemList.add(itemModel6)
 
         return itemList
     }

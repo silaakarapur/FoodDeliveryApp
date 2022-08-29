@@ -18,8 +18,6 @@ import com.google.firebase.ktx.Firebase
 
 class ProfileFragment : Fragment() {
     lateinit var binding: FragmentProfileBinding
-    private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +26,6 @@ class ProfileFragment : Fragment() {
         //    auth = FirebaseAuth.getInstance()
         binding.outButton.setOnClickListener {
             Firebase.auth.signOut()
-
             activity?.onBackPressed()
 
 //            val action = ProfileFragmentDirections.actionProfileFragmentToLoginFragment()
