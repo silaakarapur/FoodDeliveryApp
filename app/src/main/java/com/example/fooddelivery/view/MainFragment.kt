@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fooddelivery.`object`.MockList
 import com.example.fooddelivery.`object`.PopularList
@@ -34,24 +35,18 @@ class MainFragment : Fragment() {
         popularAdapter = PopularAdapter(PopularList.getFavoritesItemList())
         val lmHorizontal = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val lmHorizontal2 = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        _binding?.apply {
+        _binding.apply {
             recy.adapter = categoriesAdapter
             recy.layoutManager = lmHorizontal
             recy2.adapter = popularAdapter
             recy2.layoutManager = lmHorizontal2
+            favori.setOnClickListener {
+                val action = MainFragmentDirections.actionMainFragmentToCardFragment()
+                Navigation.findNavController(it).navigate(action)
+            }
 
-//            profileBtn.setOnClickListener {
-//                if (mAuth.currentUser != null) {
-//                    val action = HomeFragmentDirections.actionHomeFragmentToCustomerFragment()
-//                    Navigation.findNavController(it).navigate(action)
-//
-//                } else {
-//                    val action = HomeFragmentDirections.actionHomeFragmentToProfileFragment()
-//                    Navigation.findNavController(it).navigate(action)
-//                }
-//
-//            }
         }
     }
+
 
 }

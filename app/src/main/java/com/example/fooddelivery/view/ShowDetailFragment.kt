@@ -1,7 +1,6 @@
 package com.example.fooddelivery.view
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
-import com.example.fooddelivery.Card
-import com.example.fooddelivery.CardDatabase
-import com.example.fooddelivery.R
+import com.example.fooddelivery.room.Card
+import com.example.fooddelivery.room.CardDatabase
 import com.example.fooddelivery.databinding.FragmentShowDetailBinding
-import com.example.fooddelivery.databinding.FragmentSplashBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -49,11 +46,6 @@ class ShowDetailFragment : Fragment() {
                 val action =
                     ShowDetailFragmentDirections.actionShowDetailFragmentToCardFragment()
                 Navigation.findNavController(it).navigate(action)
-
-//                val action =
-//                    ShowDetailFragmentDirections.actionShowDetailFragmentToCardFragment(binding.textView13.text.toString())
-//                Navigation.findNavController(it).navigate(action)
-
                 add()
                 read()
             }
@@ -62,12 +54,12 @@ class ShowDetailFragment : Fragment() {
             popularEat.data.image.let { eatImage.setImageResource(it) }
             description.text=popularEat.data.description
         }
-
         return binding.root
     }
 
     private fun add() {
         val cardDatabase: CardDatabase? = CardDatabase.getCardDatabase(requireContext())
+
         binding.apply {
 
             val title = title.text.toString()
@@ -79,13 +71,11 @@ class ShowDetailFragment : Fragment() {
                 Card(title, textView, price, image)
             )
         }
-
     }
 
     private fun read() {
         CoroutineScope(Dispatchers.Default).launch {
             val cardDatabase: CardDatabase = CardDatabase.getCardDatabase(requireContext())!!
-
             val allMembers = cardDatabase.getCardDao().getAllBook()
             for (i in allMembers) {
                 Log.i("Log", i.eatId.toString())
@@ -95,7 +85,5 @@ class ShowDetailFragment : Fragment() {
 
             }
         }
-
-
     }
 }

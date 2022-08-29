@@ -1,4 +1,4 @@
-package com.example.fooddelivery
+package com.example.fooddelivery.room
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -22,4 +22,6 @@ data class Card(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "card_id")
     var eatId: Int = 0
+
+
 }

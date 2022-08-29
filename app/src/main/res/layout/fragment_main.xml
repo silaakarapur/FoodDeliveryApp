@@ -27,6 +27,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/color_1"
                     android:paddingTop="20dp">
 
                     <TextView
@@ -34,13 +35,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:text="Hi! Rechard"
-                        android:textColor="#BD0909"
+                        android:text="Mevcut Konum"
+                        android:textColor="@color/white"
                         android:textSize="22sp"
                         app:layout_constraintBottom_toTopOf="@+id/textView5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.644" />
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <TextView
 
@@ -48,22 +49,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Order - Eat"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
+                        android:text="Konum"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.461" />
+                        app:layout_constraintVertical_bias="0.327" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="24dp"
                         android:background="@drawable/search_background"
                         android:drawableStart="@drawable/search"
                         android:ems="10"
@@ -71,22 +72,37 @@
                         android:inputType="textPersonName"
                         android:padding="10dp"
                         android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                    <ImageView
-                        android:id="@+id/imageView4"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
+                        android:orientation="horizontal"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/profile" />
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:id="@+id/favori"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            app:srcCompat="@drawable/favorite" />
+                        <ImageView
+                            android:id="@+id/sepet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            app:srcCompat="@drawable/shopping" />
+                    </LinearLayout>
+
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -156,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp" />
 
                 <TextView
                     android:id="@+id/textView10"

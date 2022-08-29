@@ -1,5 +1,6 @@
 package com.example.fooddelivery.view
 
+import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
@@ -39,16 +40,11 @@ class LoginFragment : Fragment() {
 
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-//        if (mAuth?.currentUser != null) {
-//
-//            val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
-//            view?.let { Navigation.findNavController(it).navigate(action) }
-//        }
-
         registerAction()
         loginAction()
         signInGoogle()
         return binding.root
+
 
     }
 
@@ -58,7 +54,10 @@ class LoginFragment : Fragment() {
 
             val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             Navigation.findNavController(it).navigate(action)
+
         }
+
+
     }
 
     private fun loginAction() {
@@ -108,7 +107,7 @@ class LoginFragment : Fragment() {
     private fun signInGoogle() {
         mAuth = Firebase.auth
         val gao = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("696980861478-vddk0jhnt26s7ql6nlq2m5bj25755rnp.apps.googleusercontent.com")
+            .requestIdToken("1046623811661-tbigtda1mo3u9pg20l8f22hs4g4ac7vk.apps.googleusercontent.com")
             .requestEmail().build()
 
         googleSignInClient = GoogleSignIn.getClient(requireContext(), gao)

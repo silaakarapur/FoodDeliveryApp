@@ -20,7 +20,6 @@ class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
         val image = view.findViewById(R.id.image) as ImageView
         val price = view.findViewById<TextView>(R.id.eat_price)
         var add = view.findViewById<TextView>(R.id.add_Btn)
-        var containerImageWithText = view.findViewById<FrameLayout>(R.id.container_image_with_text)
         fun bindItem(populerFoodModel: PopularModel) {
 
 
@@ -37,7 +36,6 @@ class PopularAdapter(val itemlist: ArrayList<PopularModel>) :
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.populer_card_view, parent, false)
         return myViewHolder(view)
-        //return myViewHolder(FragmentHomeBinding.inflate(R.layout.populer_card_view,parent,false))
     }
 
     override fun onBindViewHolder(holder: myViewHolder, position: Int) {

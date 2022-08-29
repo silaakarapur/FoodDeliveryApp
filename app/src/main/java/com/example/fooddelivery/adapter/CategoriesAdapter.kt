@@ -10,16 +10,16 @@ import com.example.fooddelivery.R
 import com.example.fooddelivery.model.CategoriesModel
 
 class CategoriesAdapter(val itemlist: ArrayList<CategoriesModel>) :
-    RecyclerView.Adapter<CategoriesAdapter.myViewHolder>() {
+    RecyclerView.Adapter<CategoriesAdapter.MyViewHolder>() {
 
-    class myViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    class MyViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bindItem(categoriesModel: CategoriesModel){
 
 
-            val Description = view.findViewById(R.id.add_Btn) as TextView
+            val description = view.findViewById(R.id.add_Btn) as TextView
             val image = view.findViewById(R.id.image) as ImageView
 
-            Description.text= categoriesModel.description
+            description.text= categoriesModel.description
             image.setImageResource(categoriesModel.image)
 
         }
@@ -28,10 +28,10 @@ class CategoriesAdapter(val itemlist: ArrayList<CategoriesModel>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): myViewHolder {
+    ): MyViewHolder {
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.categories_card_view, parent, false)
-        return myViewHolder(view)
+        return MyViewHolder(view)
     }
 
 
@@ -39,7 +39,7 @@ class CategoriesAdapter(val itemlist: ArrayList<CategoriesModel>) :
         return itemlist.size
     }
 
-    override fun onBindViewHolder(holder: myViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bindItem(itemlist[position])
     }
 

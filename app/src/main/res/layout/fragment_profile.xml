@@ -28,8 +28,9 @@
                 android:drawableStart="@drawable/clipboard"
                 android:drawablePadding="15dp"
                 android:padding="10dp"
+                android:drawableTint="@color/color_1"
                 android:text="Önceki Siparişlerim"
-                android:textColor="#FF5722"
+                android:textColor="@color/color_5"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -40,8 +41,9 @@
                 android:drawableStart="@drawable/adres"
                 android:drawablePadding="15dp"
                 android:padding="10dp"
+                android:drawableTint="@color/color_1"
                 android:text="Adreslerim "
-                android:textColor="#FF5722"
+                android:textColor="@color/color_5"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -51,8 +53,9 @@
                 android:drawableStart="@drawable/card"
                 android:drawablePadding="15dp"
                 android:padding="10dp"
+                android:drawableTint="@color/color_1"
                 android:text="Kayıtlı Kartlarım"
-                android:textColor="#FF5722"
+                android:textColor="@color/color_5"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -64,7 +67,8 @@
                 android:drawablePadding="15dp"
                 android:padding="10dp"
                 android:text="Kuponlarım "
-                android:textColor="#FF5722"
+                android:drawableTint="@color/color_1"
+                android:textColor="@color/color_5"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -76,7 +80,8 @@
                 android:drawablePadding="15dp"
                 android:padding="10dp"
                 android:text="Yardım"
-                android:textColor="#FF5722"
+                android:drawableTint="@color/color_1"
+                android:textColor="@color/color_5"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -130,7 +135,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/cikisButton"
+            android:id="@+id/out_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="158dp"

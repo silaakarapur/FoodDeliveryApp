@@ -1,4 +1,4 @@
-package com.example.fooddelivery
+package com.example.fooddelivery.room
 
 import android.content.Context
 import androidx.room.Database
@@ -20,7 +20,7 @@ abstract class CardDatabase: RoomDatabase() {
             if (instance == null){
                 instance = Room.databaseBuilder(context,
                     CardDatabase::class.java,
-                    "card.db").allowMainThreadQueries().build()
+                    "carddatabase.db").allowMainThreadQueries().build()
 
             }
             return instance
