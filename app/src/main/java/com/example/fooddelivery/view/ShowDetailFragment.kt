@@ -1,5 +1,6 @@
 package com.example.fooddelivery.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -19,6 +20,8 @@ import kotlinx.coroutines.launch
 class ShowDetailFragment : Fragment() {
     lateinit var binding: FragmentShowDetailBinding
     val popularEat by navArgs<ShowDetailFragmentArgs>()
+
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,8 +30,6 @@ class ShowDetailFragment : Fragment() {
 
         binding.apply {
             plusButton.setOnClickListener {
-
-
                 if (textView13.text.toString().toInt() < 8) {
                     textView13.text = (binding.textView13.text.toString().toInt() + 1).toString()
                 }
@@ -52,7 +53,7 @@ class ShowDetailFragment : Fragment() {
             title.text = popularEat.data.name
             price.text = popularEat.data.price.toString()
             popularEat.data.image.let { eatImage.setImageResource(it) }
-            description.text=popularEat.data.description
+            description.text = popularEat.data.description
         }
         return binding.root
     }

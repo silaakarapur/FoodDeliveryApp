@@ -1,7 +1,6 @@
 package com.example.fooddelivery.room
 
 import androidx.room.*
-import com.example.fooddelivery.room.Card
 
 @Dao
 interface CardDao {

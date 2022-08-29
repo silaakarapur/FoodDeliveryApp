@@ -11,7 +11,7 @@ import com.example.fooddelivery.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
 
-lateinit var binding: FragmentSplashBinding
+    lateinit var binding: FragmentSplashBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
